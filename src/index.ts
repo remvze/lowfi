@@ -1,1 +1,3 @@
-console.log('h');
+export default function app() {
+  console.log('Hello LowFy');
+}

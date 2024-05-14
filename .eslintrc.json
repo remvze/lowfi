@@ -35,7 +35,9 @@
     "sort-destructure-keys/sort-destructure-keys": "warn",
     "prettier/prettier": "error",
     "node/no-unpublished-require": "off",
-    "node/no-unpublished-import": "off"
+    "node/no-unpublished-import": "off",
+    "node/no-missing-import": "off",
+    "node/shebang": "off"
   },
 
   "settings": {
