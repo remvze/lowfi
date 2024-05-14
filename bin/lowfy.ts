@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
-import app from '../src';
+import { program } from '@/index';
 
-app();
+program.parse();
+
+if (process.argv.length < 3) {
+  program.help();
+}
