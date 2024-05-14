@@ -9,7 +9,11 @@
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier . --write",
     "prepare": "husky",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "release": "standard-version --no-verify",
+    "release:major": "npm run release -- --release-as major",
+    "release:minor": "npm run release -- --release-as minor",
+    "release:patch": "npm run release -- --release-as patch"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +37,7 @@
     "eslint-plugin-typescript-sort-keys": "3.2.0",
     "husky": "9.0.11",
     "lint-staged": "15.2.2",
-    "prettier": "3.2.5"
+    "prettier": "3.2.5",
+    "standard-version": "9.5.0"
   }
 }
