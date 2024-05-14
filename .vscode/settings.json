@@ -1,0 +1,12 @@
+{
+  "files.eol": "\n",
+  "eslint.validate": ["javascript", "typescript"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "[javascript][typescript]": {
+    "editor.formatOnSave": false
+  }
+}
