@@ -8,7 +8,8 @@
     "lint": "eslint . --ext .js,.ts",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier . --write",
-    "prepare": "husky"
+    "prepare": "husky",
+    "commit": "git-cz"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,8 @@
     "@types/node": "20.12.12",
     "@typescript-eslint/eslint-plugin": "7.9.0",
     "@typescript-eslint/parser": "7.9.0",
+    "commitizen": "4.3.0",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-import-resolver-typescript": "3.6.1",
