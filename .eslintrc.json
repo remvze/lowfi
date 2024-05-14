@@ -33,7 +33,9 @@
   "rules": {
     "sort-keys-fix/sort-keys-fix": ["warn", "asc"],
     "sort-destructure-keys/sort-destructure-keys": "warn",
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "node/no-unpublished-require": "off",
+    "node/no-unpublished-import": "off"
   },
 
   "settings": {
