@@ -13,7 +13,11 @@ program
   .description('A CLI tool to play lofi music')
   .version(pkg.version);
 
-program.command('play').description('Play a lofi radio').action(play);
+program
+  .command('play')
+  .description('Play a lofi radio')
+  .option('-r, --random', 'Select a radio randomly')
+  .action(play);
 
 program
   .command('donate')

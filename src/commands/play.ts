@@ -2,8 +2,19 @@ import inquirer from 'inquirer';
 
 import { radios } from '@/data/radios';
 import { stream } from '@/lib/stream';
+import { pick } from '@/helpers/random';
 
-export function play() {
+interface Options {
+  random?: boolean;
+}
+
+export function play({ random }: Options) {
+  if (random) {
+    const { title, url } = pick(radios);
+
+    return stream(title, url);
+  }
+
   inquirer
     .prompt([
       {
