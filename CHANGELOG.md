@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/remvze/lowfi/compare/v0.1.3...v0.1.4) (2024-05-15)
+
+
+### 🚚 Chores
+
+* add prerequisites section ([867ac90](https://github.com/remvze/lowfi/commit/867ac90888be0cc48e7865a045a09b0bf05821f9))
+
 ### [0.1.3](https://github.com/remvze/lowfi/compare/v0.1.2...v0.1.3) (2024-05-15)
 
 
