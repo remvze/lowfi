@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/remvze/lowfi/compare/v0.1.0...v0.1.1) (2024-05-15)
+
+
+### ✨ Features
+
+* implement random option ([5243f2d](https://github.com/remvze/lowfi/commit/5243f2d0d02532893a283e5b6da3c598afbc6fc4))
+
+
+### ♻️ Code Refactoring
+
+* give args to parser ([600fa38](https://github.com/remvze/lowfi/commit/600fa38920a4b6aeb77e8723c0ee65d8c88b0faa))
+
+
+### 🚚 Chores
+
+* add README file ([33b277b](https://github.com/remvze/lowfi/commit/33b277b701ac735ac08d5f9e334f11e10e40ec50))
+* update package.json ([1e8d2ec](https://github.com/remvze/lowfi/commit/1e8d2ec147e30bef3f109460b72b9ad060ead785))
+* update package.json ([7318457](https://github.com/remvze/lowfi/commit/7318457a53adbcb0605665794188d1f586d836d8))
+* update README file ([c96bda3](https://github.com/remvze/lowfi/commit/c96bda3b4260da9c4cb675e5ed2de084502c755c))
+
 ## [0.1.0](https://github.com/remvze/lowfi/compare/v0.0.1...v0.1.0) (2024-05-15)
 
 
