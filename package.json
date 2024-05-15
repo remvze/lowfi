@@ -1,6 +1,6 @@
 {
   "name": "lowfi",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "🎵 Play Lofi music through your terminal.",
   "main": "dist/bin/lowfi.js",
   "type": "module",

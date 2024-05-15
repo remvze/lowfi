@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/remvze/lowfi/compare/v0.1.4...v0.1.5) (2024-05-15)
+
+
+### ✨ Features
+
+* add banner ([8a5420d](https://github.com/remvze/lowfi/commit/8a5420dcd53eb6b263c2b3039bf5c313c456687b))
+
 ### [0.1.4](https://github.com/remvze/lowfi/compare/v0.1.3...v0.1.4) (2024-05-15)
 
 
