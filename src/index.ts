@@ -1,6 +1,7 @@
 import { Command } from 'commander';
 
 import { play } from './commands/play';
+import { donate } from './commands/donate';
 
 import pkg from '../package.json';
 
@@ -12,5 +13,10 @@ program
   .version(pkg.version);
 
 program.command('play').description('Play a lofi radio').action(play);
+
+program
+  .command('donate')
+  .description('Donate to the creator of Lowfi')
+  .action(donate);
 
 export { program };
