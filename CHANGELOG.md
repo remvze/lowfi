@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/remvze/lowfi/compare/v0.1.2...v0.1.3) (2024-05-15)
+
+
+### 🚚 Chores
+
+* update README file ([882d24e](https://github.com/remvze/lowfi/commit/882d24e688969ddb2d5c50ed654b91d89f836e11))
+* update README.md file ([b263a6b](https://github.com/remvze/lowfi/commit/b263a6b7f72246f3a5be729515b237f892806955))
+
 ### [0.1.2](https://github.com/remvze/lowfi/compare/v0.1.1...v0.1.2) (2024-05-15)
 
 
