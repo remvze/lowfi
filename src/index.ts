@@ -5,7 +5,7 @@ import pkg from '../package.json';
 const program = new Command();
 
 program
-  .name('lowfy')
+  .name('lowfi')
   .description('A CLI tool to play lofi music')
   .version(pkg.version);
 
