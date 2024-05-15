@@ -44,6 +44,11 @@ Open the YouTube link in your browser:
 lowfi open
 ```
 
+## ⚠️ Prerequisite
+
+- [**ffmpeg**](https://ffmpge.org): Converting audio formats.
+- [**node-gyp**](https://npmjs.com/package/node-gyp): Compiling native addon modules.
+
 ## Support Lowfi
 
 ⭐ Give a star if you liked this project.
