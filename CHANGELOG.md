@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/remvze/lowfi/compare/v0.0.1...v0.1.0) (2024-05-15)
+
+
+### ✨ Features
+
+* implement donate command ([53c3130](https://github.com/remvze/lowfi/commit/53c3130d27aaffe3a96d54a2773855deb98a8982))
+* implement open command ([c51278d](https://github.com/remvze/lowfi/commit/c51278d809095c0bbceda14d6748204f240d881b))
+* implement play command ([457cf5a](https://github.com/remvze/lowfi/commit/457cf5a8aaf2b543f1dcf8feaa2911e7bf36a567))
+
 ### 0.0.1 (2024-05-15)
 
 
