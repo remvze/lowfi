@@ -1,8 +1,8 @@
 {
   "name": "lowfi",
   "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "description": "🎵 Play Lofi music through your terminal.",
+  "main": "dist/bin/lowfi.js",
   "type": "module",
   "bin": {
     "lowfi": "dist/bin/lowfi.js"
@@ -19,11 +19,15 @@
     "release:minor": "npm run release -- --release-as minor",
     "release:patch": "npm run release -- --release-as patch",
     "build": "tsup-node",
-    "dev": "tsup-node --watch"
+    "dev": "tsup-node --watch",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
+  "keywords": [
+    "lofi",
+    "cli"
+  ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "19.3.0",
     "@commitlint/config-conventional": "19.2.2",
