@@ -26,7 +26,15 @@
     "lofi",
     "cli"
   ],
-  "author": "",
+  "author": "MAZE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remvze/lowfi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/remvze/lowfi/issues"
+  },
+  "homepage": "https://github.com/remvze/lowfi#readme",
   "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "19.3.0",
