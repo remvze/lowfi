@@ -3,8 +3,11 @@ import open from 'open';
 import ora from 'ora';
 
 import { radios } from '@/data/radios';
+import { printBanner } from '@/lib/banner';
 
-export function openCommand() {
+export async function openCommand() {
+  await printBanner();
+
   inquirer
     .prompt([
       {

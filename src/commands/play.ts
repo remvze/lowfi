@@ -2,13 +2,16 @@ import inquirer from 'inquirer';
 
 import { radios } from '@/data/radios';
 import { stream } from '@/lib/stream';
+import { printBanner } from '@/lib/banner';
 import { pick } from '@/helpers/random';
 
 interface Options {
   random?: boolean;
 }
 
-export function play({ random }: Options) {
+export async function play({ random }: Options) {
+  await printBanner();
+
   if (random) {
     const { title, url } = pick(radios);
 
