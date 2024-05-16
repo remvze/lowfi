@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/remvze/lowfi/compare/v0.1.5...v0.1.6) (2024-05-16)
+
+
+### 🐛 Bug Fixes
+
+* change streaming package ([a8b0eb9](https://github.com/remvze/lowfi/commit/a8b0eb9f7b36065b6127f39ead8045ce9f30817b))
+
 ### [0.1.5](https://github.com/remvze/lowfi/compare/v0.1.4...v0.1.5) (2024-05-15)
 
 
