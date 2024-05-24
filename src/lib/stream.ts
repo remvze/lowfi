@@ -14,12 +14,16 @@ export async function stream(title: string, url: string) {
     spinner.succeed();
 
     const startTime = Date.now();
-    const elapsedTimeSpinner = ora(`🕒 00:00:00`).start();
+
+    const elapsedTimeSpinner = ora({
+      spinner: 'clock',
+      text: `00:00:00`,
+    }).start();
 
     const timer = setInterval(() => {
       const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
 
-      elapsedTimeSpinner.text = `🕒 ${formatTime(elapsedTime)}`;
+      elapsedTimeSpinner.text = formatTime(elapsedTime);
     }, 1000);
 
     const speaker = new Speaker({
