@@ -8,11 +8,11 @@ export const radios = [
     url: 'https://www.youtube.com/watch?v=4xDzrJKXOOY',
   },
   {
-    title: 'Lofi Girl — focus radio',
+    title: 'Lofi Girl — peaceful piano radio',
     url: 'https://www.youtube.com/watch?v=4oStw0r33so',
   },
   {
-    title: 'Lofi Girl — dream radio',
+    title: 'Lofi Girl — dark ambient radio',
     url: 'https://www.youtube.com/watch?v=S_MOd40zlYU',
   },
   {
