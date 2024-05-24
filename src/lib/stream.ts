@@ -1,13 +1,15 @@
 import Speaker from 'speaker';
 import ffmpeg from 'fluent-ffmpeg-7';
 import ora from 'ora';
-import play from 'play-dl';
+import { stream as playStream } from 'play-dl';
 
-async function stream(title: string, url: string) {
+import { formatTime } from '@/helpers/time';
+
+export async function stream(title: string, url: string) {
   const spinner = ora(`Starting ${title}`).start();
 
   try {
-    const { stream } = await play.stream(url);
+    const { stream } = await playStream(url);
 
     spinner.succeed();
 
@@ -16,6 +18,7 @@ async function stream(title: string, url: string) {
 
     const timer = setInterval(() => {
       const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+
       elapsedTimeSpinner.text = `🕒 ${formatTime(elapsedTime)}`;
     }, 1000);
 
@@ -41,19 +44,10 @@ async function stream(title: string, url: string) {
       })
       .pipe(speaker);
   } catch (error) {
-    spinner.fail(`Failed to start stream: ${error.message}`);
+    if (error instanceof Error) {
+      spinner.fail(`Failed to start stream: ${error.message}`);
+    } else {
+      spinner.fail('Failed to start stream');
+    }
   }
 }
-
-function formatTime(seconds: number): string {
-  const hrs = Math.floor(seconds / 3600)
-    .toString()
-    .padStart(2, '0');
-  const mins = Math.floor((seconds % 3600) / 60)
-    .toString()
-    .padStart(2, '0');
-  const secs = (seconds % 60).toString().padStart(2, '0');
-  return `${hrs}:${mins}:${secs}`;
-}
-
-export { stream };
