@@ -1,7 +1,10 @@
 import open from 'open';
 import inquirer from 'inquirer';
+import chalk from 'chalk';
 
 export function donate() {
+  console.log(`${chalk.green('[•ᴗ•]')} Hello There!`);
+
   console.log('Enjoyed Lowfi? Please consider buying me a coffee!');
   console.log('Link: https://buymeacoffee.com/remvze');
 
