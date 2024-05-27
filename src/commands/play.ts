@@ -7,15 +7,20 @@ import { pick } from '@/helpers/random';
 
 interface Options {
   random?: boolean;
+  url?: string;
 }
 
-export async function play({ random }: Options) {
+export async function play({ random, url }: Options) {
   await printBanner();
 
   if (random) {
     const { title, url } = pick(radios);
 
     return stream(title, url);
+  }
+
+  if (url) {
+    return stream(null, url);
   }
 
   inquirer
