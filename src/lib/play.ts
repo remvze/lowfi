@@ -12,24 +12,25 @@ export function play(title: string, stream: Readable) {
     let timer: ReturnType<typeof setInterval> | null = null;
     const elapsedTimeSpinner = ora({
       spinner: 'clock',
-      text: `00:00:00`,
+      text: `Listening for 00:00:00`,
     });
 
     const spinner = ora(`Starting ${title}`).start();
+    let startTime: number;
 
     try {
       const speaker = createSpeaker();
       const middleware = new MiddlewareStream(() => {
         spinner.succeed();
 
-        const startTime = Date.now();
+        startTime = Date.now();
 
         elapsedTimeSpinner.start();
 
         timer = setInterval(() => {
           const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
 
-          elapsedTimeSpinner.text = formatTime(elapsedTime);
+          elapsedTimeSpinner.text = `Listening for ${formatTime(elapsedTime)}`;
         }, 1000);
       });
       const ffmpegStream = createFfmpegStream(
@@ -37,8 +38,10 @@ export function play(title: string, stream: Readable) {
         () => {
           if (timer) clearInterval(timer);
 
+          const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+
           elapsedTimeSpinner.succeed(
-            `Stream ended. You listened for ${elapsedTimeSpinner.text.slice(2)}.`,
+            `Stream ended. You listened for ${formatTime(elapsedTime)}.`,
           );
 
           resolve(true);
