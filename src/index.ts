@@ -5,6 +5,7 @@ import { donate } from './commands/donate';
 import { openCommand } from './commands/open';
 
 import pkg from '../package.json';
+import { customurl } from './commands/url';
 
 const program = new Command();
 
@@ -28,5 +29,10 @@ program
   .command('open')
   .description('Open a lofi radio in your browser')
   .action(openCommand);
+
+program
+  .command('url')
+  .description('Open your own URL as stream in the terminal')
+  .action(customurl);
 
 export { program };

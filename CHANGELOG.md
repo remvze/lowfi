@@ -4,37 +4,32 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [0.2.0](https://github.com/remvze/lowfi/compare/v0.1.6...v0.2.0) (2024-05-24)
 
-
 ### ⚠ BREAKING CHANGES
 
-* **elapsed time on playing:** re-structured the file a bit to make it more readable
+- **elapsed time on playing:** re-structured the file a bit to make it more readable
 
 ### 🐛 Bug Fixes
 
-* **fix space in radio:** fixed the accidental space on radio names ([37e630c](https://github.com/remvze/lowfi/commit/37e630c2c35cccba14514cafe1acad7c81412aa4))
-* typo in README file ([4d6cb17](https://github.com/remvze/lowfi/commit/4d6cb170ffb09f8ed0e183c00cb979390409bad0))
-
+- **fix space in radio:** fixed the accidental space on radio names ([37e630c](https://github.com/remvze/lowfi/commit/37e630c2c35cccba14514cafe1acad7c81412aa4))
+- typo in README file ([4d6cb17](https://github.com/remvze/lowfi/commit/4d6cb170ffb09f8ed0e183c00cb979390409bad0))
 
 ### ✨ Features
 
-* **addition of all lofi girl streams:** adding all existing lofi girl streams into the list ([951ea8a](https://github.com/remvze/lowfi/commit/951ea8a3ebac88a199ca0ce8db2afaa0f9225f3c))
-* **elapsed time on playing:** adding a timer that shows how long you listened ([6b82a27](https://github.com/remvze/lowfi/commit/6b82a2793e9b481129e0a979eff25c99a471a5d0))
-
+- **addition of all lofi girl streams:** adding all existing lofi girl streams into the list ([951ea8a](https://github.com/remvze/lowfi/commit/951ea8a3ebac88a199ca0ce8db2afaa0f9225f3c))
+- **elapsed time on playing:** adding a timer that shows how long you listened ([6b82a27](https://github.com/remvze/lowfi/commit/6b82a2793e9b481129e0a979eff25c99a471a5d0))
 
 ### ♻️ Code Refactoring
 
-* add pad number helper ([781e017](https://github.com/remvze/lowfi/commit/781e017be489aa3d7efc355a7365b1fb7cb0f770))
-* replace some codes ([5429be5](https://github.com/remvze/lowfi/commit/5429be5a6d9b3712a46d45ab268eb76e26a13b1a))
-
+- add pad number helper ([781e017](https://github.com/remvze/lowfi/commit/781e017be489aa3d7efc355a7365b1fb7cb0f770))
+- replace some codes ([5429be5](https://github.com/remvze/lowfi/commit/5429be5a6d9b3712a46d45ab268eb76e26a13b1a))
 
 ### 🚚 Chores
 
-* change radio names ([386554b](https://github.com/remvze/lowfi/commit/386554bed661d31ef5e3cf2a2e7855dd522d3808))
-
+- change radio names ([386554b](https://github.com/remvze/lowfi/commit/386554bed661d31ef5e3cf2a2e7855dd522d3808))
 
 ### 💄 Styling
 
-* change spinner type ([9e43e1a](https://github.com/remvze/lowfi/commit/9e43e1a5c4228f661adc4d761a65c23c71055cec))
+- change spinner type ([9e43e1a](https://github.com/remvze/lowfi/commit/9e43e1a5c4228f661adc4d761a65c23c71055cec))
 
 ### [0.1.6](https://github.com/remvze/lowfi/compare/v0.1.5...v0.1.6) (2024-05-16)
 
