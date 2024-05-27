@@ -2,10 +2,31 @@ import Speaker from 'speaker';
 import ffmpeg from 'fluent-ffmpeg-7';
 import ora from 'ora';
 import { stream as playStream } from 'play-dl';
+import ytdl from 'ytdl-core';
 
 import { formatTime } from '@/helpers/time';
 
-export async function stream(title: string, url: string) {
+export async function stream(title: string | null, url: string) {
+  if (title == null) {
+    const spinner = ora('Fetching URL information').start();
+
+    try {
+      const info = await ytdl.getBasicInfo(url);
+
+      spinner.succeed();
+
+      title = info.videoDetails.title;
+    } catch (error) {
+      if (error instanceof Error) {
+        spinner.fail(`Error: ${error.message}`);
+      } else {
+        spinner.fail('Error: Something went wrong');
+      }
+
+      return;
+    }
+  }
+
   const spinner = ora(`Starting ${title}`).start();
 
   try {
