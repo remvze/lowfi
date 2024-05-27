@@ -38,6 +38,12 @@ Randomly play a radio:
 lowfi play --random
 ```
 
+Play a custom YouTube URL:
+
+```bash
+lowfi play --url https://www.youtube.com/watch?v=8ZeC-8klo_o
+```
+
 Open the YouTube link in your browser:
 
 ```bash
