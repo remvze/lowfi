@@ -2,6 +2,41 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/remvze/lowfi/compare/v0.2.0...v0.3.0) (2024-05-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* **url.ts:** Addition of a command
+
+### ✨ Features
+
+* fecth custom url information ([bdc45d2](https://github.com/remvze/lowfi/commit/bdc45d26b6ee02c2b8aad936dd27ee49c0da3dd9))
+* **url.ts:** addition to play custom URLs in the terminal ([a17aecb](https://github.com/remvze/lowfi/commit/a17aecb1c7cd0330a479a84b6a5e4bfc1f34632e))
+
+
+### ♻️ Code Refactoring
+
+* replace the custom url command with an option ([fed68c0](https://github.com/remvze/lowfi/commit/fed68c01555ddabd175a28e6ea318667b034fa22))
+
+
+### 🐛 Bug Fixes
+
+* use ytdl-core for URLs that are not live ([09db4fb](https://github.com/remvze/lowfi/commit/09db4fb942398e2e13bd51f029223d68a79c3d1d))
+
+
+### 🚚 Chores
+
+* add contributing file ([f491e2c](https://github.com/remvze/lowfi/commit/f491e2c081e8c9c0a38215a716bd4c070e7c9f6e))
+* uninstall extra dependency ([3c6c0e6](https://github.com/remvze/lowfi/commit/3c6c0e6b615823693f04735950b06bd035096f98))
+* update README file ([f5bfe84](https://github.com/remvze/lowfi/commit/f5bfe8435128c9a857bdd6c01181dccceb9e1210))
+
+
+### 💄 Styling
+
+* add emoticon ([5430c67](https://github.com/remvze/lowfi/commit/5430c67e7e898ec00675395411a8a3d1694f7b9e))
+* change timer text ([4c5474b](https://github.com/remvze/lowfi/commit/4c5474b22eb0cb6cf0a5b7f7d15b25707d2489ac))
+
 ## [0.2.0](https://github.com/remvze/lowfi/compare/v0.1.6...v0.2.0) (2024-05-24)
 
 ### ⚠ BREAKING CHANGES
