@@ -5,5 +5,5 @@ export function info(message: string) {
 }
 
 export function error(message: string) {
-  console.log(logSymbols.error, message);
+  console.error(logSymbols.error, message);
 }

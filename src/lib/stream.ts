@@ -1,8 +1,8 @@
 import ora from 'ora';
 import { stream as playStream } from 'play-dl';
 import ytdl from 'ytdl-core';
-import logSymbols from 'log-symbols';
 
+import { error, info } from './logger';
 import { play } from './play';
 
 export async function stream(
@@ -34,18 +34,18 @@ export async function stream(
     const { stream } = await playStream(url);
 
     await play(title, volume, stream);
-  } catch (error) {
-    console.log(logSymbols.info, 'Retrying using ytdl-core instead');
+  } catch (err) {
+    info('Retrying using ytdl-core instead');
 
     try {
       const stream = await ytdl(url);
 
       await play(title, volume, stream);
-    } catch (error) {
-      if (error instanceof Error) {
-        console.error(logSymbols.error, `Error: ${error.message}`);
+    } catch (err) {
+      if (err instanceof Error) {
+        error(`Error: ${err.message}`);
       } else {
-        console.error(logSymbols.error, `Something went wrong.`);
+        error(`Something went wrong.`);
       }
     }
   }
