@@ -32,6 +32,12 @@ Play a lofi radio:
 lowfi play
 ```
 
+Set volume:
+
+```bash
+lowfi play --volume 0.5
+```
+
 Randomly play a radio:
 
 ```bash
