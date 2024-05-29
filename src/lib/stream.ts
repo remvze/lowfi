@@ -5,7 +5,11 @@ import logSymbols from 'log-symbols';
 
 import { play } from './play';
 
-export async function stream(title: string | null, url: string) {
+export async function stream(
+  title: string | null,
+  volume: number,
+  url: string,
+) {
   if (title == null) {
     const spinner = ora('Fetching URL information').start();
 
@@ -29,14 +33,14 @@ export async function stream(title: string | null, url: string) {
   try {
     const { stream } = await playStream(url);
 
-    await play(title, stream);
+    await play(title, volume, stream);
   } catch (error) {
     console.log(logSymbols.info, 'Retrying using ytdl-core instead');
 
     try {
       const stream = await ytdl(url);
 
-      await play(title, stream);
+      await play(title, volume, stream);
     } catch (error) {
       if (error instanceof Error) {
         console.error(logSymbols.error, `Error: ${error.message}`);

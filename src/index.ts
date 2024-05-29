@@ -18,6 +18,7 @@ program
   .description('Play a lofi radio')
   .option('-r, --random', 'Select a radio randomly')
   .option('--url <string>', 'A custom YouTube URL to stream')
+  .option('-v, --volume <number>', 'Set the volume', '0.5')
   .action(play);
 
 program

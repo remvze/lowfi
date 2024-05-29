@@ -6,8 +6,9 @@ import { formatTime } from '@/helpers/time';
 import { MiddlewareStream } from './middleware';
 import { createFfmpegStream } from './ffmpeg';
 import { createSpeaker } from './speaker';
+import { createVolume } from './volume';
 
-export function play(title: string, stream: Readable) {
+export function play(title: string, volumeAmount: number, stream: Readable) {
   return new Promise((resolve, reject) => {
     let timer: ReturnType<typeof setInterval> | null = null;
     const elapsedTimeSpinner = ora({
@@ -20,6 +21,8 @@ export function play(title: string, stream: Readable) {
 
     try {
       const speaker = createSpeaker();
+      const volume = createVolume(volumeAmount);
+
       const middleware = new MiddlewareStream(() => {
         spinner.succeed();
 
@@ -33,6 +36,7 @@ export function play(title: string, stream: Readable) {
           elapsedTimeSpinner.text = `Listening for ${formatTime(elapsedTime)}`;
         }, 1000);
       });
+
       const ffmpegStream = createFfmpegStream(
         stream,
         () => {
@@ -55,7 +59,7 @@ export function play(title: string, stream: Readable) {
         },
       );
 
-      ffmpegStream.pipe(middleware).pipe(speaker);
+      ffmpegStream.pipe(middleware).pipe(volume).pipe(speaker);
     } catch (error) {
       reject(error);
     }

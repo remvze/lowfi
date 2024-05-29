@@ -48,6 +48,7 @@
     "@types/gradient-string": "1.1.6",
     "@types/inquirer": "9.0.7",
     "@types/node": "20.12.12",
+    "@types/pcm-volume": "1.0.2",
     "@typescript-eslint/eslint-plugin": "7.9.0",
     "@typescript-eslint/parser": "7.9.0",
     "commitizen": "4.3.0",
@@ -79,6 +80,7 @@
     "log-symbols": "6.0.0",
     "open": "10.1.0",
     "ora": "8.0.1",
+    "pcm-volume": "1.0.0",
     "play-dl": "1.9.7",
     "speaker": "0.5.5",
     "ytdl-core": "4.11.5"
