@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/remvze/lowfi/compare/v0.3.0...v0.4.0) (2024-05-31)
+
+
+### ✨ Features
+
+* add volume option ([4967d2e](https://github.com/remvze/lowfi/commit/4967d2e86498258d329a95319d861948f1e41cd2))
+
+
+### ♻️ Code Refactoring
+
+* use logger instead ([05ec38f](https://github.com/remvze/lowfi/commit/05ec38ffb5b0a7a7e37471de363d2d5815824d8d))
+
+
+### 🚚 Chores
+
+* add volume guide to README ([c7fa2d2](https://github.com/remvze/lowfi/commit/c7fa2d2c2ef4972973c933681cc8d884d3caf6bb))
+
 ## [0.3.0](https://github.com/remvze/lowfi/compare/v0.2.0...v0.3.0) (2024-05-28)
 
 
