@@ -61,6 +61,10 @@ lowfi open
 - [**ffmpeg**](https://ffmpge.org): Converting audio formats.
 - [**node-gyp**](https://npmjs.com/package/node-gyp): Compiling native addon modules.
 
+## Contributing
+
+🚧 Please check [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
 ## Support Lowfi
 
 ⭐ Give a star if you liked this project.
