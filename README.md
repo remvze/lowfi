@@ -22,6 +22,10 @@ GitHub:
 
 ```bash
 git clone https://github.com/remvze/lowfi
+
+npm install
+npm run build
+npm link
 ```
 
 ## ✨ Usage
