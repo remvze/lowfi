@@ -23,6 +23,8 @@ GitHub:
 ```bash
 git clone https://github.com/remvze/lowfi
 
+cd lowfi
+
 npm install
 npm run build
 npm link
