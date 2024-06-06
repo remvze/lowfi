@@ -4,30 +4,21 @@
   <a href="https://npmjs.com/package/lowfi"><strong>npm</strong></a> | <a href="https://buymeacoffee.com/remvze">Buy Me a Coffee</a>
 </div>
 
-## ⚡ Install
+## Table of Contents
 
-npm:
+- ⚡ [Installation](#-installation)
+- ✨ [Usage](#-usage)
+- ⚠️ [Prerequisites](#-prerequisites)
+- 🚧 [Contributing](#contributing)
+- ⭐ [Support](#support-lowfi)
+- 📜 [License](#-license)
+
+## ⚡ Installation
+
+To install Lowfi, use npm or any other package manager:
 
 ```bash
 npm install -g lowfi
-```
-
-Yarn:
-
-```bash
-yarn global add lowfi
-```
-
-GitHub:
-
-```bash
-git clone https://github.com/remvze/lowfi
-
-cd lowfi
-
-npm install
-npm run build
-npm link
 ```
 
 ## ✨ Usage
@@ -76,3 +67,7 @@ lowfi open
 ⭐ Give a star if you liked this project.
 
 ☕ [Buy Me a Coffee](https://buymeacoffee.com/remvze) to help me maintain Lowfi.
+
+## 📜 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
