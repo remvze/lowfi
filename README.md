@@ -6,68 +6,89 @@
 
 ## Table of Contents
 
-- ⚡ [Installation](#-installation)
-- ✨ [Usage](#-usage)
-- ⚠️ [Prerequisites](#-prerequisites)
-- 🚧 [Contributing](#contributing)
-- ⭐ [Support](#support-lowfi)
-- 📜 [License](#-license)
+- ⚡ [Installation](#installation)
+- ✨ [Usage](#usage)
+- 🔮 [Commands](#commands)
+- ⚠️ [Prerequisites](#prerequisites)
+- 🤝 [Contributing](#contributing)
+- ⭐ [Support](#support)
+- 📜 [License](#license)
 
-## ⚡ Installation
+## Installation
 
-To install Lowfi, use npm or any other package manager:
+To install Lowfi, you need Node.js and npm installed on your machine. You can install the CLI tool globally using the following command:
 
 ```bash
 npm install -g lowfi
 ```
 
-## ✨ Usage
+## Usage
 
-Play a lofi radio:
+After installation, you can run the CLI tool using the following command:
+
+```bash
+lowfi [command] [options]
+```
+
+To see a list of available commands and options, run:
+
+```bash
+lowfi --help
+```
+
+## Commands
+
+### `play`
+
+Play a lofi radio.
 
 ```bash
 lowfi play
 ```
 
-Set volume:
+**Options:**
 
-```bash
-lowfi play --volume 0.5
-```
+- `--random`: Randomly select a radio.
+- `--volume <number>`: Set the volume (between 0 and 1).
+- `--url <url>`: Play a custom YouTube URL.
 
-Randomly play a radio:
+### `open`
 
-```bash
-lowfi play --random
-```
-
-Play a custom YouTube URL:
-
-```bash
-lowfi play --url https://www.youtube.com/watch?v=8ZeC-8klo_o
-```
-
-Open the YouTube link in your browser:
+Open the YouTube link in your browser.
 
 ```bash
 lowfi open
 ```
 
-## ⚠️ Prerequisites
+## Prerequisites
 
 - [**ffmpeg**](https://ffmpge.org): Converting audio formats.
 - [**node-gyp**](https://npmjs.com/package/node-gyp): Compiling native addon modules.
 
 ## Contributing
 
-🚧 Please check [CONTRIBUTING.md](CONTRIBUTING.md) file.
+We welcome contributions from the community! If you'd like to contribute, please follow these steps:
 
-## Support Lowfi
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Make your changes and commit them with a descriptive commit message.
+4. Push your changes to your fork.
+5. Open a pull request with a detailed description of your changes.
 
-⭐ Give a star if you liked this project.
+Please make sure to follow our [Contributing Guidelines](CONTRIBUTING.md).
 
-☕ [Buy Me a Coffee](https://buymeacoffee.com/remvze) to help me maintain Lowfi.
+## Support
 
-## 📜 License
+If you find this project useful, please consider supporting it by giving it a star on GitHub. Your support helps us continue to improve and maintain the project.
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+You can also support the project by [making a donation](https://buymeacoffee.com/remvze). Every little bit helps and is greatly appreciated!
+
+Thank you for your support!
+
+## License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+Thank you for using Relaxer! If you have any questions or feedback, please open an issue on GitHub.
