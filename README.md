@@ -91,4 +91,4 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ---
 
-Thank you for using Relaxer! If you have any questions or feedback, please open an issue on GitHub.
+Thank you for using Lowfi! If you have any questions or feedback, please open an issue on GitHub.
