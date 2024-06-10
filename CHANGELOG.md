@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.1](https://github.com/remvze/lowfi/compare/v0.4.0...v0.4.1) (2024-06-10)
+
+
+### 🚚 Chores
+
+* add better instruction ([4716912](https://github.com/remvze/lowfi/commit/4716912f1e0c1e30f3bcda76da420d5a1fb3d9c8))
+* add extra command ([9d4b6d0](https://github.com/remvze/lowfi/commit/9d4b6d0626c366dbfc5fd54d976aa8f1aa7dc5de))
+* complete Contributing Guide ([0824eb4](https://github.com/remvze/lowfi/commit/0824eb452e9ad0e46bf30a864816cdae41f35f2d))
+* update contributing guide ([ffc9971](https://github.com/remvze/lowfi/commit/ffc99719063f5409ce57efaf3747612aa3ccbd7e))
+* update README file ([acc440d](https://github.com/remvze/lowfi/commit/acc440d08a53950f874cec0675dced5320569f00))
+* update README file ([4668fa8](https://github.com/remvze/lowfi/commit/4668fa8375586f2595c2fa36d2149cf3e1002d72))
+* update README file ([688eab6](https://github.com/remvze/lowfi/commit/688eab686ba9b6db3cb7f0b1ca7bc71b7eedd1f9))
+* update README file ([88fb07b](https://github.com/remvze/lowfi/commit/88fb07bd5b66338e431b4318fa2434d06f71cdc0))
+
 ## [0.4.0](https://github.com/remvze/lowfi/compare/v0.3.0...v0.4.0) (2024-05-31)
 
 
