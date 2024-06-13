@@ -35,6 +35,12 @@ export async function stream(
 
     await play(title, volume, stream);
   } catch (err) {
+    if (err instanceof Error) {
+      error(`Error: ${err.message}`);
+    } else {
+      error(`Something went wrong.`);
+    }
+
     info('Retrying using ytdl-core instead');
 
     try {
