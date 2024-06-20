@@ -29,7 +29,7 @@ export async function stream(volume: number, url: string) {
 
     const data = await soundcloud(url);
 
-    spinner.succeed();
+    spinner.succeed('Fetched the playlist from SoundCloud');
     console.log('');
 
     if (data.type === 'playlist') {
