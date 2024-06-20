@@ -8,11 +8,10 @@ import { error } from '@/lib/logger';
 
 interface Options {
   random?: boolean;
-  url?: string;
   volume: string;
 }
 
-export async function play({ random, url, volume }: Options) {
+export async function play({ random, volume }: Options) {
   await printBanner();
 
   if (volume) {
@@ -24,13 +23,9 @@ export async function play({ random, url, volume }: Options) {
   }
 
   if (random) {
-    const { title, url } = pick(radios);
+    const { url } = pick(radios);
 
-    return stream(title, Number(volume), url);
-  }
-
-  if (url) {
-    return stream(null, Number(volume), url);
+    return stream(Number(volume), url);
   }
 
   inquirer
@@ -45,6 +40,6 @@ export async function play({ random, url, volume }: Options) {
     .then(answers => {
       const radio = radios.filter(radio => radio.title === answers.radio)[0];
 
-      stream(radio.title, Number(volume), radio.url);
+      stream(Number(volume), radio.url);
     });
 }

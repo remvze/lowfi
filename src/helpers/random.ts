@@ -7,3 +7,10 @@ export function pick<T>(array: Array<T>): T {
 
   return array[randomIndex];
 }
+
+export function shuffle<T>(array: Array<T>): Array<T> {
+  return array
+    .map(value => ({ sort: Math.random(), value }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}

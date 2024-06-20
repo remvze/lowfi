@@ -1,22 +1,6 @@
 export const radios = [
   {
-    title: 'Lofi Girl — lofi hip hop radio',
-    url: 'https://www.youtube.com/watch?v=jfKfPfyJRdk',
-  },
-  {
-    title: 'Lofi Girl — synthwave radio',
-    url: 'https://www.youtube.com/watch?v=4xDzrJKXOOY',
-  },
-  {
-    title: 'Lofi Girl — peaceful piano radio',
-    url: 'https://www.youtube.com/watch?v=4oStw0r33so',
-  },
-  {
-    title: 'Lofi Girl — dark ambient radio',
-    url: 'https://www.youtube.com/watch?v=S_MOd40zlYU',
-  },
-  {
-    title: 'Lofi Girl — sleep radio',
-    url: 'https://www.youtube.com/watch?v=rUxyKA_-grg',
+    title: 'Lofi Girl — dark ambient playlist',
+    url: 'https://soundcloud.com/lofi_girl/sets/dark-ambient-music-to-escape',
   },
 ];

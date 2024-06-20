@@ -11,12 +11,8 @@ import { createVolume } from './volume';
 export function play(title: string, volumeAmount: number, stream: Readable) {
   return new Promise((resolve, reject) => {
     let timer: ReturnType<typeof setInterval> | null = null;
-    const elapsedTimeSpinner = ora({
-      spinner: 'clock',
-      text: `Listening for 00:00:00`,
-    });
+    const spinner = ora(`Now playing "${title}" (00:00)`);
 
-    const spinner = ora(`Starting ${title}`).start();
     let startTime: number;
 
     try {
@@ -24,16 +20,14 @@ export function play(title: string, volumeAmount: number, stream: Readable) {
       const volume = createVolume(volumeAmount);
 
       const middleware = new MiddlewareStream(() => {
-        spinner.succeed();
-
         startTime = Date.now();
 
-        elapsedTimeSpinner.start();
+        spinner.start();
 
         timer = setInterval(() => {
           const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
 
-          elapsedTimeSpinner.text = `Listening for ${formatTime(elapsedTime)}`;
+          spinner.text = `Now playing "${title}" (${formatTime(elapsedTime)})`;
         }, 1000);
       });
 
@@ -44,16 +38,12 @@ export function play(title: string, volumeAmount: number, stream: Readable) {
 
           const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
 
-          elapsedTimeSpinner.succeed(
-            `Stream ended. You listened for ${formatTime(elapsedTime)}.`,
-          );
+          spinner.succeed(`Finished "${title}" (${formatTime(elapsedTime)})`);
 
           resolve(true);
         },
         error => {
           if (timer) clearInterval(timer);
-
-          spinner.fail(`Failed to start stream: ${error.message}`);
 
           reject(error);
         },
