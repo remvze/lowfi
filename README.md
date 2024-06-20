@@ -40,7 +40,7 @@ lowfi --help
 
 ### `play`
 
-Play a lofi radio.
+Play a lofi playlist.
 
 ```bash
 lowfi play
@@ -48,13 +48,12 @@ lowfi play
 
 **Options:**
 
-- `--random`: Randomly select a radio.
+- `--random`: Randomly select a playlist.
 - `--volume <number>`: Set the volume (between 0 and 1).
-- `--url <url>`: Play a custom YouTube URL.
 
 ### `open`
 
-Open the YouTube link in your browser.
+Open a playlist in your browser.
 
 ```bash
 lowfi open

@@ -15,9 +15,8 @@ program
 
 program
   .command('play')
-  .description('Play a lofi radio')
-  .option('-r, --random', 'Select a radio randomly')
-  .option('--url <string>', 'A custom YouTube URL to stream')
+  .description('Play a lofi playlist')
+  .option('-r, --random', 'Select a playlist randomly')
   .option('-v, --volume <number>', 'Set the volume', '0.5')
   .action(play);
 
@@ -28,7 +27,7 @@ program
 
 program
   .command('open')
-  .description('Open a lofi radio in your browser')
+  .description('Open a lofi playlist in your browser')
   .action(openCommand);
 
 export { program };

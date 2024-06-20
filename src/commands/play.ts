@@ -1,7 +1,7 @@
 import inquirer from 'inquirer';
 import chalk from 'chalk';
 
-import { radios } from '@/data/radios';
+import { playlists } from '@/data/playlists';
 import { stream } from '@/lib/stream';
 import { printBanner } from '@/lib/banner';
 import { pick } from '@/helpers/random';
@@ -24,7 +24,7 @@ export async function play({ random, volume }: Options) {
   }
 
   if (random) {
-    const { title, url } = pick(radios);
+    const { title, url } = pick(playlists);
 
     info(`Selected playlist: ${chalk.bold.white(title)}\n`);
 
@@ -34,15 +34,17 @@ export async function play({ random, volume }: Options) {
   inquirer
     .prompt([
       {
-        choices: radios.map(radio => radio.title),
+        choices: playlists.map(playlist => playlist.title),
         message: 'Select a lofi playlist to play:',
-        name: 'radio',
+        name: 'playlist',
         type: 'list',
       },
     ])
     .then(answers => {
-      const radio = radios.filter(radio => radio.title === answers.radio)[0];
+      const playlist = playlists.filter(
+        playlist => playlist.title === answers.playlist,
+      )[0];
 
-      stream(Number(volume), radio.url);
+      stream(Number(volume), playlist.url);
     });
 }
