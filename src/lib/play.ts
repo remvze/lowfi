@@ -1,5 +1,6 @@
 import type { Readable } from 'stream';
 import ora from 'ora';
+import chalk from 'chalk';
 
 import { formatTime } from '@/helpers/time';
 
@@ -11,7 +12,7 @@ import { createVolume } from './volume';
 export function play(title: string, volumeAmount: number, stream: Readable) {
   return new Promise((resolve, reject) => {
     let timer: ReturnType<typeof setInterval> | null = null;
-    const spinner = ora(`Now playing "${title}" (00:00)`);
+    const spinner = ora(`Now playing "${chalk.bold.white(title)}" (00:00)`);
 
     let startTime: number;
 
@@ -27,7 +28,7 @@ export function play(title: string, volumeAmount: number, stream: Readable) {
         timer = setInterval(() => {
           const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
 
-          spinner.text = `Now playing "${title}" (${formatTime(elapsedTime)})`;
+          spinner.text = `Now playing "${chalk.bold.white(title)}" (${formatTime(elapsedTime)})`;
         }, 1000);
       });
 
@@ -38,7 +39,9 @@ export function play(title: string, volumeAmount: number, stream: Readable) {
 
           const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
 
-          spinner.succeed(`Finished "${title}" (${formatTime(elapsedTime)})`);
+          spinner.succeed(
+            `Finished "${chalk.bold.white(title)}" (${formatTime(elapsedTime)})`,
+          );
 
           resolve(true);
         },
