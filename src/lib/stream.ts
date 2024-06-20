@@ -17,7 +17,8 @@ export async function stream(volume: number, url: string) {
   let spinner;
 
   try {
-    spinner = ora('Fetching a Client ID from SoundCloud').start();
+    spinner = ora('Fetching the playlist from SoundCloud').start();
+
     const id = await getFreeClientID();
 
     setToken({
@@ -26,11 +27,10 @@ export async function stream(volume: number, url: string) {
       },
     });
 
-    spinner.text = 'Fetching playlist from SoundCloud';
-
     const data = await soundcloud(url);
 
     spinner.succeed();
+    console.log('');
 
     if (data.type === 'playlist') {
       const pl = new SoundCloudPlaylist(data, id);
