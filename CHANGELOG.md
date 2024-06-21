@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/remvze/lowfi/compare/v0.4.1...v0.5.0) (2024-06-21)
+
+
+### 💄 Styling
+
+* make the title bold ([2d8b044](https://github.com/remvze/lowfi/commit/2d8b044d7deef52c17f6ba18a12afdd9abcfff21))
+
+
+### 🐛 Bug Fixes
+
+* change verb after fetching ([4381d5e](https://github.com/remvze/lowfi/commit/4381d5ef22bc30f1970b5c4fd6d53426d24967e3))
+* minor changes ([107de54](https://github.com/remvze/lowfi/commit/107de547edc1ead22cd1b19a58ae7380abe55449))
+
+
+### ♻️ Code Refactoring
+
+* change radio to playlist ([41911e7](https://github.com/remvze/lowfi/commit/41911e7655b6975b66441dde1a28c76ccb4f44fb))
+
+
+### ✨ Features
+
+* add error message ([f044734](https://github.com/remvze/lowfi/commit/f04473474f499ce3e301c7938fc7b8f905d4daaf))
+* add more playlists ([0411a26](https://github.com/remvze/lowfi/commit/0411a26c2ea4f4febec70567300f810fdfec7820))
+* add title for the random playlist ([e128191](https://github.com/remvze/lowfi/commit/e12819196f57e7a1974696ec4b0952694d4a4a21))
+* move from YouTube to SoundCloud ([7da634f](https://github.com/remvze/lowfi/commit/7da634fb8ad3b5a1d71ad041ed34522cd242b1d0))
+
+
+### 🚚 Chores
+
+* uninstall ytdl-core ([f0b0739](https://github.com/remvze/lowfi/commit/f0b0739a60f2967849e02e4cc9708146fb731437))
+
 ### [0.4.1](https://github.com/remvze/lowfi/compare/v0.4.0...v0.4.1) (2024-06-10)
 
 
