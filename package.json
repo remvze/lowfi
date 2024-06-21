@@ -82,7 +82,6 @@
     "ora": "8.0.1",
     "pcm-volume": "1.0.0",
     "play-dl": "1.9.7",
-    "speaker": "0.5.5",
-    "ytdl-core": "4.11.5"
+    "speaker": "0.5.5"
   }
 }
