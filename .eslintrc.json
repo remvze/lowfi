@@ -37,7 +37,8 @@
     "node/no-unpublished-require": "off",
     "node/no-unpublished-import": "off",
     "node/no-missing-import": "off",
-    "node/shebang": "off"
+    "node/shebang": "off",
+    "no-constant-condition": "off"
   },
 
   "settings": {

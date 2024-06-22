@@ -36,11 +36,15 @@ export async function stream(volume: number, url: string) {
       const pl = new SoundCloudPlaylist(data, id);
       const tracks = await pl.all_tracks();
       const shuffled = shuffle(tracks);
+      let index = 0;
 
-      for (const track of shuffled) {
+      while (true) {
+        const track = shuffled[index];
         const { stream } = await playStream(track.url);
 
         await play(track.name, volume, stream);
+
+        index = (index + 1) % shuffled.length;
       }
     }
   } catch (err) {
