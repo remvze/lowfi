@@ -23,4 +23,8 @@ export const playlists = [
     title: 'Chillhop Music — Golden Hour Playlist',
     url: 'https://soundcloud.com/chillhopdotcom/sets/golden-hour',
   },
+  {
+    title: 'Studio Ghibli - Lofi (Study, Sleep, Relax)',
+    url: 'https://soundcloud.com/luvemenot/sets/studio-ghibli-lofi-study-sleep-relax',
+  }
 ];
