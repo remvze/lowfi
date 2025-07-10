@@ -1,15 +1,9 @@
 import ora from 'ora';
 
-import {
-  stream as playStream,
-  getFreeClientID,
-  setToken,
-  SoundCloudPlaylist,
-  soundcloud,
-} from 'play-dl';
-
 import { error } from './logger';
 import { play } from './play';
+
+import { Client } from 'soundcloud-scraper';
 
 import { shuffle } from '@/helpers/random';
 
@@ -19,30 +13,23 @@ export async function stream(volume: number, url: string) {
   try {
     spinner = ora('Fetching the playlist from SoundCloud').start();
 
-    const id = await getFreeClientID();
-
-    setToken({
-      soundcloud: {
-        client_id: id,
-      },
-    });
-
-    const data = await soundcloud(url);
+    const client = new Client();
+    const info = await client.getPlaylist(url);
 
     spinner.succeed('Fetched the playlist from SoundCloud');
     console.log('');
 
-    if (data.type === 'playlist') {
-      const pl = new SoundCloudPlaylist(data, id);
-      const tracks = await pl.all_tracks();
+    if (info.tracks) {
+      const { tracks } = info;
       const shuffled = shuffle(tracks);
+
       let index = 0;
 
       while (true) {
         const track = shuffled[index];
-        const { stream } = await playStream(track.url);
+        const stream = await track.downloadProgressive();
 
-        await play(track.name, volume, stream);
+        await play(track.title!, volume, stream);
 
         index = (index + 1) % shuffled.length;
       }

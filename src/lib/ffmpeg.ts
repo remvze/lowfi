@@ -1,5 +1,5 @@
 import type { Readable } from 'stream';
-import ffmpeg from 'fluent-ffmpeg-7';
+import ffmpeg from 'fluent-ffmpeg';
 
 export function createFfmpegStream(
   stream: Readable,
