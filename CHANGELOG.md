@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.1](https://github.com/remvze/lowfi/compare/v0.6.0...v0.6.1) (2025-07-10)
+
+
+### ✨ Features
+
+* replace play-dl ([779c54f](https://github.com/remvze/lowfi/commit/779c54f42b8c558908f5d9d376214d84112e12a3))
+
 ## [0.6.0](https://github.com/remvze/lowfi/compare/v0.5.0...v0.6.0) (2025-07-10)
 
 
