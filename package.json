@@ -1,6 +1,6 @@
 {
   "name": "lowfi",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "🎵 Play Lofi music through your terminal.",
   "main": "dist/bin/lowfi.js",
   "type": "module",
@@ -73,15 +73,14 @@
     "chalk": "5.3.0",
     "commander": "12.0.0",
     "figlet": "1.7.0",
-    "fluent-ffmpeg": "2.1.2",
-    "fluent-ffmpeg-7": "2.1.5",
+    "fluent-ffmpeg": "2.1.3",
     "gradient-string": "2.0.2",
     "inquirer": "9.2.21",
     "log-symbols": "6.0.0",
     "open": "10.1.0",
     "ora": "8.0.1",
     "pcm-volume": "1.0.0",
-    "play-dl": "1.9.7",
+    "soundcloud-scraper": "5.0.3",
     "speaker": "0.5.5"
   }
 }

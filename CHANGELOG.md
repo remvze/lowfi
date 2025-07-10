@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/remvze/lowfi/compare/v0.5.0...v0.6.0) (2025-07-10)
+
+
+### ✨ Features
+
+* make the loop infinite ([b342881](https://github.com/remvze/lowfi/commit/b34288159a56809863512e482ae394416bbdd6a4))
+
+
+### 🚚 Chores
+
+* **deps-dev:** bump braces from 3.0.2 to 3.0.3 ([96e5c78](https://github.com/remvze/lowfi/commit/96e5c78eda651b9ddb9f3a82ed0a7785631fe50c))
+
 ## [0.5.0](https://github.com/remvze/lowfi/compare/v0.4.1...v0.5.0) (2024-06-21)
 
 
