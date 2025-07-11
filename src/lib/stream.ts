@@ -3,7 +3,8 @@ import ora from 'ora';
 import { error } from './logger';
 import { play } from './play';
 
-import { Client } from 'soundcloud-scraper';
+import type { Client as ClientType } from './scraper/types';
+import Client from './scraper/client.js';
 
 import { shuffle } from '@/helpers/random';
 
@@ -13,13 +14,13 @@ export async function stream(volume: number, url: string) {
   try {
     spinner = ora('Fetching the playlist from SoundCloud').start();
 
-    const client = new Client();
+    const client: ClientType = new Client();
     const info = await client.getPlaylist(url);
 
     spinner.succeed('Fetched the playlist from SoundCloud');
     console.log('');
 
-    if (info.tracks) {
+    if (info?.tracks) {
       const { tracks } = info;
       const shuffled = shuffle(tracks);
 
