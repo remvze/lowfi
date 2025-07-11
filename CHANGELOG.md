@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.9.1](https://github.com/remvze/lowfi/compare/v0.9.0...v0.9.1) (2025-07-11)
+
+
+### ✨ Features
+
+* add new playlist Lofi Ghibli ([4523ebb](https://github.com/remvze/lowfi/commit/4523ebbb38db0c9017c34d313330992a7d937e0b))
+* show tracks count ([59c55aa](https://github.com/remvze/lowfi/commit/59c55aa1d77cb700087b788382b10686a7946751))
+
+
+### 💄 Styling
+
+* minor change ([6e3b1a3](https://github.com/remvze/lowfi/commit/6e3b1a3f916439dadf2165e45ad00e05c1a328ee))
+
 ## [0.9.0](https://github.com/remvze/lowfi/compare/v0.8.0...v0.9.0) (2025-07-11)
 
 
