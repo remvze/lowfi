@@ -1,25 +1,21 @@
-import m3u8stream from 'm3u8stream';
-import http from 'http';
+import m3u8stream, {
+  Options as M3U8StreamOptions,
+  Stream as M3U8Stream,
+} from 'm3u8stream';
+import http, { RequestOptions, IncomingMessage } from 'http';
 import https from 'https';
 
 class Downloader {
-  /**
-   * SoundCloud stream downloader
-   * @hideconstructor
-   */
-  constructor() {
+  private constructor() {
     throw new Error(
       `The ${this.constructor.name} class may not be instantiated!`,
     );
   }
 
-  /**
-   * Downloads `m3u8`/`hls` stream
-   * @param {string} url Stream url to download
-   * @param {m3u8stream.Options} options m3u8 download options
-   * @returns {Promise<m3u8stream.Stream>}
-   */
-  static downloadHLS(url, options = {}) {
+  static downloadHLS(
+    url: string,
+    options: M3U8StreamOptions = {},
+  ): Promise<M3U8Stream> {
     return new Promise((resolve, reject) => {
       if (!url || typeof url !== 'string') {
         return reject(new Error(`Expected url, received "${typeof url}"!`));
@@ -29,13 +25,10 @@ class Downloader {
     });
   }
 
-  /**
-   * Downloads progressive stream
-   * @param {string} url Stream url to download
-   * @param {RequestOptions} options Request options
-   * @returns {Promise<IncomingMessage>}
-   */
-  static downloadProgressive(url, options = {}) {
+  static downloadProgressive(
+    url: string,
+    options: RequestOptions = {},
+  ): Promise<IncomingMessage> {
     return new Promise((resolve, reject) => {
       if (!url || typeof url !== 'string') {
         return reject(new Error(`Expected url, received "${typeof url}"!`));

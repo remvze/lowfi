@@ -40,7 +40,8 @@
     "node/shebang": "off",
     "no-constant-condition": "off",
     "no-async-promise-executor": "off",
-    "node/no-unsupported-features/es-syntax": "off"
+    "node/no-unsupported-features/es-syntax": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   },
 
   "settings": {
