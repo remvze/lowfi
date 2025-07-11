@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/remvze/lowfi/compare/v0.6.1...v0.7.0) (2025-07-11)
+
+
+### 🐛 Bug Fixes
+
+* migrate the deprecated dep ([210d8f2](https://github.com/remvze/lowfi/commit/210d8f2813bc8201aff5f640091e10a12d7b58db))
+
 ### [0.6.1](https://github.com/remvze/lowfi/compare/v0.6.0...v0.6.1) (2025-07-10)
 
 
