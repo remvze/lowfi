@@ -3,7 +3,6 @@ import ora from 'ora';
 import { error } from './logger';
 import { play } from './play';
 
-import type { Client as ClientType } from './scraper/types';
 import Client from './scraper/client.js';
 
 import { shuffle } from '@/helpers/random';
@@ -14,7 +13,7 @@ export async function stream(volume: number, url: string) {
   try {
     spinner = ora('Fetching the playlist from SoundCloud').start();
 
-    const client: ClientType = new Client();
+    const client = new Client();
     const info = await client.getPlaylist(url);
 
     spinner.succeed('Fetched the playlist from SoundCloud');
