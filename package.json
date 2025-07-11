@@ -80,7 +80,8 @@
     "open": "10.1.0",
     "ora": "8.0.1",
     "pcm-volume": "1.0.0",
-    "play-dl": "1.9.7",
+    "soundcloud-key-fetch": "1.0.13",
+    "soundcloud.ts": "0.6.5",
     "speaker": "0.5.5"
   }
 }
