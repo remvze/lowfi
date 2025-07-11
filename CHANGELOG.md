@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/remvze/lowfi/compare/v0.7.0...v0.8.0) (2025-07-11)
+
+
+### 🐛 Bug Fixes
+
+* remove extra type ([af9355a](https://github.com/remvze/lowfi/commit/af9355aa95fee7f8c2409c852bafcbebe4487d65))
+
+
+### ♻️ Code Refactoring
+
+* migrate to TypeScript ([e6b00f1](https://github.com/remvze/lowfi/commit/e6b00f1ac0156ae61160c98bdfca0e54c7286eae))
+* remove extras ([9cd3080](https://github.com/remvze/lowfi/commit/9cd30807bcea227e842ffb1c30d00502950825c6))
+
+
+### ✨ Features
+
+* bring back the play-dl ([14e2dff](https://github.com/remvze/lowfi/commit/14e2dff406d245367668c91ad92b2b26e941dc93))
+
 ## [0.7.0](https://github.com/remvze/lowfi/compare/v0.6.1...v0.7.0) (2025-07-11)
 
 
