@@ -19,10 +19,12 @@ export async function stream(volume: number, url: string) {
     const soundcloud = new Soundcloud(clientId);
     const playlist = await soundcloud.playlists.get(url);
 
-    spinner.succeed('Fetched the playlist from SoundCloud');
-    console.log('');
-
     if (playlist?.tracks) {
+      spinner.succeed(
+        `Fetched the playlist from SoundCloud (${playlist.track_count} Tracks)`,
+      );
+      console.log('');
+
       const { tracks } = playlist;
       const shuffled = shuffle(tracks);
 
