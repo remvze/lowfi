@@ -24,7 +24,7 @@ export const playlists = [
     url: 'https://soundcloud.com/chillhopdotcom/sets/golden-hour',
   },
   {
-    title: 'Studio Ghibli - Lofi (Study, Sleep, Relax)',
+    title: 'Studio Ghibli — Lofi (Study, Sleep, Relax)',
     url: 'https://soundcloud.com/luvemenot/sets/studio-ghibli-lofi-study-sleep-relax',
-  }
+  },
 ];
