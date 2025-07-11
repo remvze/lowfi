@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.9.0](https://github.com/remvze/lowfi/compare/v0.8.0...v0.9.0) (2025-07-11)
+
+
+### ✨ Features
+
+* replace play-dl with soundcloud.ts ([0920596](https://github.com/remvze/lowfi/commit/0920596ce99dda967062381699180f1f3b9b441e))
+
 ## [0.8.0](https://github.com/remvze/lowfi/compare/v0.7.0...v0.8.0) (2025-07-11)
 
 
