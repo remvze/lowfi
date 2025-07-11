@@ -59,10 +59,6 @@ export default class Client {
       throw new Error(`URL must be a string, received "${typeof url}"!`);
     }
 
-    if (!Util.validateURL(url, 'playlist')) {
-      throw new TypeError('Invalid url!');
-    }
-
     await this.createAPIKey();
 
     const apiUrl = `https://api-v2.soundcloud.com/resolve?client_id=${Store.get('SOUNDCLOUD_API_KEY')}&url=${url}`;

@@ -14,39 +14,6 @@ export default class Util {
     );
   }
 
-  static validateURL(
-    url: string | null = null,
-    type: 'all' | 'track' | 'playlist' | 'artist' = 'all',
-  ): boolean {
-    if (typeof url !== 'string') return false;
-
-    const lastSegment = url.split('/').pop();
-
-    switch (type) {
-      case 'artist':
-        return Constants.REGEX_ARTIST.test(url);
-      case 'playlist':
-        return (
-          Constants.REGEX_SET.test(url) ||
-          (url.includes('soundcloud.app.goo.gl') &&
-            lastSegment !== undefined &&
-            lastSegment.length === 5)
-        );
-      case 'track':
-        return (
-          Constants.REGEX_TRACK.test(url) ||
-          (url.includes('soundcloud.app.goo.gl') &&
-            lastSegment !== undefined &&
-            lastSegment.length > 5)
-        );
-      default:
-        return (
-          Constants.SOUNDCLOUD_URL_REGEX.test(url) ||
-          /soundcloud\.app\.goo\.gl/.test(url)
-        );
-    }
-  }
-
   static request(
     url: RequestInfo,
     options: RequestInit = {},
