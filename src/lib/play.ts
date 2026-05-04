@@ -1,58 +1,52 @@
-import type { Readable } from 'stream';
-import ora from 'ora';
+import { spawn } from 'child_process';
 import chalk from 'chalk';
 
-import { formatTime } from '@/helpers/time';
-
-import { MiddlewareStream } from './middleware';
-import { createFfmpegStream } from './ffmpeg';
-import { createSpeaker } from './speaker';
-import { createVolume } from './volume';
-
-export function play(title: string, volumeAmount: number, stream: Readable) {
+export function play(title: string, volumeAmount: number, streamUrl: string) {
   return new Promise((resolve, reject) => {
-    let timer: ReturnType<typeof setInterval> | null = null;
-    const spinner = ora(`Now playing "${chalk.bold.white(title)}" (00:00)`);
-
-    let startTime: number;
-
     try {
-      const speaker = createSpeaker();
-      const volume = createVolume(volumeAmount);
+      console.log('');
+      console.log(
+        chalk.cyan(
+          `[mpv] Streaming ${chalk.bold.white(title)} at ${Math.round(volumeAmount * 100)}% volume`,
+        ),
+      );
+      console.log(chalk.dim('[mpv] Press q to stop playback.\n'));
 
-      const middleware = new MiddlewareStream(() => {
-        startTime = Date.now();
-
-        spinner.start();
-
-        timer = setInterval(() => {
-          const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
-
-          spinner.text = `Now playing "${chalk.bold.white(title)}" (${formatTime(elapsedTime)})`;
-        }, 1000);
-      });
-
-      const ffmpegStream = createFfmpegStream(
-        stream,
-        () => {
-          if (timer) clearInterval(timer);
-
-          const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
-
-          spinner.succeed(
-            `Finished "${chalk.bold.white(title)}" (${formatTime(elapsedTime)})`,
-          );
-
-          resolve(true);
-        },
-        error => {
-          if (timer) clearInterval(timer);
-
-          reject(error);
+      const player = spawn(
+        'mpv',
+        [
+          '--no-video',
+          '--msg-level=all=status',
+          `--volume=${Math.round(volumeAmount * 100)}`,
+          '--force-window=no',
+          streamUrl,
+        ],
+        {
+          stdio: 'inherit',
         },
       );
 
-      ffmpegStream.pipe(middleware).pipe(volume).pipe(speaker);
+      player.on('error', (error: NodeJS.ErrnoException) => {
+        if (error.code === 'ENOENT') {
+          reject(
+            new Error(
+              'mpv is not installed or not in PATH. Install mpv, then run the command again.',
+            ),
+          );
+          return;
+        }
+
+        reject(error);
+      });
+
+      player.on('exit', code => {
+        if (code === 0 || code === null) {
+          resolve(true);
+          return;
+        }
+
+        reject(new Error(`mpv exited with code ${code}`));
+      });
     } catch (error) {
       reject(error);
     }

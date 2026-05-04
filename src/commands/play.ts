@@ -1,19 +1,34 @@
 import inquirer from 'inquirer';
 import chalk from 'chalk';
 
-import { playlists } from '@/data/playlists';
-import { stream } from '@/lib/stream';
 import { printBanner } from '@/lib/banner';
-import { pick } from '@/helpers/random';
-import { info, error } from '@/lib/logger';
+import { play as playAudio } from '@/lib/play';
+import { error } from '@/lib/logger';
+import {
+  fetchStations,
+  getStationById,
+  resolvePlayableStream,
+  stationChoices,
+} from '@/lib/somafm';
 
 interface Options {
-  random?: boolean;
+  quality?: string;
   volume: string;
 }
 
-export async function play({ random, volume }: Options) {
+const supportedQualities = ['highest', 'high', 'slow'];
+const divider = '-'.repeat(68);
+
+function formatListeners(count: number) {
+  return new Intl.NumberFormat('en-US').format(count);
+}
+
+export async function play(
+  id: string | undefined,
+  { quality, volume }: Options,
+) {
   await printBanner();
+  const normalizedQuality = quality?.toLowerCase();
 
   if (volume) {
     const volumeNumber = Number(volume);
@@ -23,28 +38,63 @@ export async function play({ random, volume }: Options) {
     }
   }
 
-  if (random) {
-    const { title, url } = pick(playlists);
-
-    info(`Selected playlist: ${chalk.bold.white(title)}\n`);
-
-    return stream(Number(volume), url);
+  if (normalizedQuality && !supportedQualities.includes(normalizedQuality)) {
+    return error('Quality should be one of: highest, high, slow');
   }
 
-  inquirer
-    .prompt([
-      {
-        choices: playlists.map(playlist => playlist.title),
-        message: 'Select a lofi playlist to play:',
-        name: 'playlist',
-        type: 'list',
-      },
-    ])
-    .then(answers => {
-      const playlist = playlists.filter(
-        playlist => playlist.title === answers.playlist,
-      )[0];
+  try {
+    const channels = await fetchStations();
+    let stationId = id;
 
-      stream(Number(volume), playlist.url);
-    });
+    if (!stationId) {
+      const answers = await inquirer.prompt([
+        {
+          choices: stationChoices(channels),
+          message: 'Select a SomaFM station to play:',
+          name: 'stationId',
+          type: 'list',
+        },
+      ]);
+
+      stationId = answers.stationId as string;
+    }
+
+    const station = getStationById(channels, stationId);
+
+    if (!station) {
+      return error(
+        `Station "${stationId}" not found. Run ${chalk.bold.white('lowfi list')}.`,
+      );
+    }
+
+    const streamUrl = await resolvePlayableStream(station, normalizedQuality);
+
+    console.log(`\n${chalk.cyan(divider)}`);
+    console.log(
+      `${chalk.cyan('  Station')}      ${chalk.bold.white(station.title)} ${chalk.dim(`[${station.id}]`)}`,
+    );
+    console.log(
+      `${chalk.cyan('  Genre')}        ${station.genre || 'Unknown'}`,
+    );
+    console.log(
+      `${chalk.cyan('  Listeners')}    ${formatListeners(station.listeners)}`,
+    );
+    console.log(
+      `${chalk.cyan('  Quality')}      ${normalizedQuality || 'auto (best available)'}`,
+    );
+    if (station.lastPlaying) {
+      console.log(
+        `${chalk.cyan('  Last Track')}   ${chalk.dim(station.lastPlaying)}`,
+      );
+    }
+    console.log(`${chalk.cyan(divider)}`);
+
+    await playAudio(station.title, Number(volume), streamUrl);
+  } catch (err) {
+    if (err instanceof Error) {
+      error(`Error: ${err.message}`);
+    } else {
+      error('Something went wrong.');
+    }
+  }
 }
