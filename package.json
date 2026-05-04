@@ -1,6 +1,6 @@
 {
   "name": "lowfi",
-  "version": "0.9.1",
+  "version": "1.0.0",
   "description": "🎵 A SomaFM client for your terminal.",
   "main": "dist/bin/lowfi.js",
   "type": "module",

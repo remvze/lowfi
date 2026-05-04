@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/remvze/lowfi/compare/v0.9.1...v1.0.0) (2026-05-04)
+
+
+### ✨ Features
+
+* remake ([d409fc1](https://github.com/remvze/lowfi/commit/d409fc171a47ca597d38d4e1b538f534ca77e873))
+
 ### [0.9.1](https://github.com/remvze/lowfi/compare/v0.9.0...v0.9.1) (2025-07-11)
 
 
