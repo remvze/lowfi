@@ -9,6 +9,14 @@
 npm install -g lowfi
 ```
 
+## Version 1.0 Update
+
+Lowfi v1.0 is now a dedicated SomaFM client.
+
+Previous versions used SoundCloud playlists, but SoundCloud stream behavior changed in ways that made long-term CLI playback unreliable.
+
+To keep Lowfi stable and simple, the project moved to SomaFM-only streaming.
+
 ## Usage
 
 ```bash
