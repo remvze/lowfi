@@ -30,12 +30,15 @@ export async function play(
   await printBanner();
   const normalizedQuality = quality?.toLowerCase();
 
-  if (volume) {
-    const volumeNumber = Number(volume);
+  const volumeNumber = Number(volume);
 
-    if (volumeNumber < 0 || volumeNumber > 1) {
-      return error('Volume should be between 0 and 1');
-    }
+  if (
+    volume.trim() === '' ||
+    !Number.isFinite(volumeNumber) ||
+    volumeNumber < 0 ||
+    volumeNumber > 1
+  ) {
+    return error('Volume should be a number between 0 and 1');
   }
 
   if (normalizedQuality && !supportedQualities.includes(normalizedQuality)) {
@@ -89,7 +92,7 @@ export async function play(
     }
     console.log(`${chalk.cyan(divider)}`);
 
-    await playAudio(station.title, Number(volume), streamUrl);
+    await playAudio(station.title, volumeNumber, streamUrl);
   } catch (err) {
     if (err instanceof Error) {
       error(`Error: ${err.message}`);
